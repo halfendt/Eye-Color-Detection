@@ -28,8 +28,9 @@ EyeColor = {
 }
 
 def check_color(hsv, color):
-    if (hsv[0] >= color[0][0]) and (hsv[0] <= color[1][0]) and (hsv[1] >= color[0][1]) and \
-    hsv[1] <= color[1][1] and (hsv[2] >= color[0][2]) and (hsv[2] <= color[1][2]):
+    if (hsv[0] >= color[0][0]/2) and (hsv[0] <= color[1][0]/2) and \
+       (hsv[1] >= color[0][1]/100*255) and (hsv[1] <= color[1][1]/100*255) and \
+       (hsv[2] >= color[0][2]/100*255) and (hsv[2] <= color[1][2]/100*255):
         return True
     else:
         return False
